@@ -4,8 +4,8 @@ def bank():
         with open("account.txt", "r") as file:
             history = file.readlines()
             if history:
-                for file in history:
-                    print(file.strip())
+                for line in history:
+                    print(line.strip())
             else:
                 print("Transaction file is empty")
     except FileNotFoundError:
